@@ -6,7 +6,9 @@ const formulario = document.querySelector('#formulario');
 const mostrar1 = document.querySelector('.mostrarAlfabeto1');
 const mostrar2 = document.querySelector('.mostrarAlfabeto2');
 const aux = document.querySelector('.aux');
-const enlaceUnion = document.querySelector('#union')
+const enlaceUnion = document.querySelector('#union');
+const enlaceInter = document.querySelector('#interseccion')
+
 let valorAlfabeto1 = null;
 let valorAlfabeto2 = null;
 
@@ -36,9 +38,10 @@ function leerAlfabeto(e){
         localStorage.setItem('alfabeto2', JSON.stringify(nuevoalfabeto2));
         valorAlfabeto1 = JSON.parse(localStorage.getItem('alfabeto1'));
         valorAlfabeto2 = JSON.parse(localStorage.getItem('alfabeto2'));
-        
+
         mostrarAlfabeto();
         mostrarUnion();
+        mostrarInterseccion();
     }
     inputAlfabeto1.value = '';
     inputAlfabeto2.value = '';
@@ -54,11 +57,18 @@ function mostrarAlfabeto(){
     }
 }
 
-
-
 function mostrarUnion(){
     const alfabetosPegados = valorAlfabeto1.concat(valorAlfabeto2);
     const filtroUnion = ((el,index) => alfabetosPegados.indexOf(el) === index);
     const unionAlfabetos = alfabetosPegados.filter(filtroUnion);
-    enlaceUnion.textContent= `{${unionAlfabetos}}`;
+    enlaceUnion.textContent = `{${unionAlfabetos}}`;
 }
+
+function mostrarInterseccion(){
+    const alfabetosInter = valorAlfabeto1.concat(valorAlfabeto2);
+    const filtroInter = ((el,index) => alfabetosInter.indexOf(el) !== index);
+    const interseccionAlfa = alfabetosInter.filter(filtroInter);
+    enlaceInter.textContent = `{${interseccionAlfa}}`;
+}
+
+
