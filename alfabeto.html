@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 3 - Alfabeto</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    <div>
-        <form action="" id="formulario">
-            <label for="alfabeto">Ingresar Alfabeto:</label>
-            <input type="text" id="alfabeto" name="alfabeto" placeholder="por ejemplo {@,aa,ir,;,1)">
-            <button type="submit">Guardar</button>
-            <p>Para agregar m&aacute;s de uno por favor ingrese la coma ','</p>
-        </form>
+    <div class="container">
+        <h1 class="text-center mt-2 mb-4">Alfabetos</h1>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <form id="formulario">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Ingreso</h5>
+                            <label for="alfabeto1" >Ingresar Alfabeto 1:</label>
+                            <input type="text" id="alfabeto1" class="form-control" name="alfabeto1" placeholder="@,aa,ir,-,1">
+                            <small class="text-muted">Separe por comas</small>                            
+
+                            <label for="alfabeto2" class="mt-4">Ingresar Alfabeto 2:</label>
+                            <input type="text" id="alfabeto2" class="form-control" name="alfabeto2" placeholder="@,aa,ir,-,1">
+                            <small class="text-muted">Separe por comas</small>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-success mt-2 ">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Alfabetos Guardados</h5>
+                            <p class="text-center mt-4 aux">Ninguno</p>
+                            <p class="mostrarAlfabeto1"></p> 
+                            <p class="mostrarAlfabeto2"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Ejercicios</h5>
+                            <ul>
+                                <li>Uni&oacute;n</li>
+                                <p id="union"></p>
+                                <li id="interseccion">Intersecci&oacute;n</li>
+                                <li id="diferencia">Diferencia</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="js/logic.js"></script>
 </body>
+
 </html>
