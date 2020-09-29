@@ -7,12 +7,11 @@ const mostrar1 = document.querySelector('.mostrarAlfabeto1');
 const mostrar2 = document.querySelector('.mostrarAlfabeto2');
 const aux = document.querySelector('.aux');
 const enlaceUnion = document.querySelector('#union');
-const enlaceInter = document.querySelector('#interseccion')
+const enlaceInter = document.querySelector('#interseccion');
+const enlaceDiff = document.querySelector('#diferencia');
 
 let valorAlfabeto1 = null;
 let valorAlfabeto2 = null;
-
-
 
 //Listeners
 cargarEventListeners();
@@ -42,6 +41,7 @@ function leerAlfabeto(e){
         mostrarAlfabeto();
         mostrarUnion();
         mostrarInterseccion();
+        mostrarDiferencia();
     }
     inputAlfabeto1.value = '';
     inputAlfabeto2.value = '';
@@ -51,9 +51,8 @@ function mostrarAlfabeto(){
 
     if(valorAlfabeto1 !== null && valorAlfabeto2 !== null){
         aux.remove();
-        mostrar1.textContent = `A1: { ${valorAlfabeto1}} `;
+        mostrar1.textContent = `A1: {${valorAlfabeto1}}`;
         mostrar2.textContent = `A2: {${valorAlfabeto2}}`;
-
     }
 }
 
@@ -71,4 +70,9 @@ function mostrarInterseccion(){
     enlaceInter.textContent = `{${interseccionAlfa}}`;
 }
 
+function mostrarDiferencia(){
+    const filtroDiff = ((el) => !valorAlfabeto2.includes(el));
+    const diferenciaAlfa = valorAlfabeto1.filter(filtroDiff);
+    enlaceDiff.textContent = `{${diferenciaAlfa}}`;
+}
 
