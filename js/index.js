@@ -19,3 +19,17 @@ function mostrarDiferencia(){
     const diferencia = valorInput1.filter(filtroDiff);
     return `{${diferencia}}`;
 }
+
+function concatenacion(){
+    let prueba = [];
+    for(let i=0; i<valorInput1.length; i++){
+        let a = valorInput1[i];
+        //a = aaa
+        for(let j=0; j<valorInput2.length; j++){
+            let b = valorInput2[j];
+            //b = bbb
+            (a === '!' ? prueba.push(b) : b === '!' ? prueba.push(a) : prueba.push(`${a+b}`) );
+        }
+    }
+    return `{${prueba}}`;
+}

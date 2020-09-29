@@ -9,7 +9,7 @@ const aux = document.querySelector('.aux');
 const enlaceUnion = document.querySelector('#union');
 const enlaceInter = document.querySelector('#interseccion');
 const enlaceDiff = document.querySelector('#diferencia');
-
+const enlaceConcat = document.querySelector('#concatenacion');
 
 //Listeners
 cargarEventListeners();
@@ -29,6 +29,7 @@ function leerLenguaje(e){
     mostrarUnion();
     mostrarInterseccion();
     mostrarDiferencia();
+    concatenacion();
 }
 
 function mostrarLenguaje(){
@@ -39,5 +40,6 @@ function mostrarLenguaje(){
         enlaceUnion.textContent = mostrarUnion();
         enlaceInter.textContent = mostrarInterseccion();
         enlaceDiff.textContent = mostrarDiferencia();
+        enlaceConcat.textContent = concatenacion();
     }
 }
