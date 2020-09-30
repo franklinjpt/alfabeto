@@ -39,7 +39,15 @@ function potencia(otra ,nPotencia) {
       lgPotencia = concatenacion(lgPotencia, otra);
     }
     return lgPotencia;
-  }
+}
+
+function inverso(){
+    let inverso = [...valorInput1];
+    inverso.reverse();
+    return inverso;
+}
+
+let cardinalidad = () => valorInput1.length;
 
 
 
