@@ -17,12 +17,17 @@
                         <div class="card-body">
                             <h4 class="card-title text-center">Ingreso</h5>
                             <label for="lenguaje" >Ingresar Lenguaje 1:</label>
-                            <input type="text" id="lenguaje1" class="form-control" name="lenguaje1" placeholder="@,aa,ir,-,1">
+                            <input type="text" id="lenguaje1" class="form-control" name="lenguaje1" placeholder="@,aa,ir,2">
                             <small class="text-muted">Separe por comas</small>                            
                             <br>
                             <label for="lenguaje2" class="mt-3">Ingresar Lenguaje 2:</label>
-                            <input type="text" id="lenguaje2" class="form-control" name="lenguaje2" placeholder="@,aa,ir,-,1">
+                            <input type="text" id="lenguaje2" class="form-control" name="lenguaje2" placeholder="@,aa,ir,2">
                             <small class="text-muted">Separe por comas</small>
+                            <br>
+                            <label for="potencia" class="mt-3">Ingresar potencia:</label>
+                            <input type="number" id="nPotencia" class="form-control" name="nPotencia" max="6" min="0">
+                            <small class="text-muted">Por default es 1 y maximo 6</small>
+
                             <div class="text-center">
                                 <button type="submit" class="btn btn-success mt-2 ">Guardar</button>
                             </div>
@@ -35,9 +40,7 @@
                 <div class="card" >
                     <div class="card-body">
                         <h4 class="card-title text-center">Lenguajes guardados</h5>
-                            <p class="text-center mt-4 aux">Ninguno</p>
-                            <p class="mostrarAlfabeto1"></p> 
-                            <p class="mostrarAlfabeto2"></p>
+                            <p class="text-center mt-4 aux">Ninguno</p>                            
                             <p class="mostrarLenguaje1"></p>
                             <p class="mostrarLenguaje2"></p>
                     </div>
@@ -46,27 +49,29 @@
 
             
         </div>
-    </div>
-    <div class="row mt-4 justify-content-center">
-        <div class="col-6">
-            <div class="card" >
-                <div class="card-body">
-                    <h4 class="card-title text-center">Ejercicios</h5>
-                        <ul>
-                            <li>Uni&oacute;n</li>
-                            <p id="union"></p>
-                            <li>Intersecci&oacute;n</li>
-                            <p id="interseccion"></p>
-                            <li>Diferencia</li>
-                            <p id="diferencia"></p>
-                            <li>Concatenaci&oacute;n</li>
-                            <p id="concatenacion"></p>
-                        </ul>
+    
+        <div class="row mt-4 justify-content-center">
+            <div class="col-6">
+                <div class="card" >
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Ejercicios</h5>
+                            <ul>
+                                <li>Uni&oacute;n</li>
+                                <p id="union"></p>
+                                <li>Intersecci&oacute;n</li>
+                                <p id="interseccion"></p>
+                                <li>Diferencia</li>
+                                <p id="diferencia"></p>
+                                <li>Concatenaci&oacute;n</li>
+                                <p id="concatenacion"></p>
+                                <li>Potencia</li>
+                                <p id="potencia"></p>
+                            </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="js/index.js"></script>
     <script src="js/lenguaje.js"></script>
     
