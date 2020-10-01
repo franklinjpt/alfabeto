@@ -1,23 +1,19 @@
-let valorInput1 = [];
-let valorInput2 = [];
-let inputs = [];
-
-function mostrarUnion(){
-    const filtroUnion = ((el,index) => inputs.indexOf(el) === index);
-    const union = inputs.filter(filtroUnion);
-    return `{${union}}`;
+function mostrarUnion(a){
+    const filtroUnion = ((el,index) => a.indexOf(el) === index);
+    const union = a.filter(filtroUnion);
+    return union;
 }
 
-function mostrarInterseccion(){
-    const filtroInter = ((el,index) => inputs.indexOf(el) !== index);
-    const interseccion = inputs.filter(filtroInter);
-    return `{${interseccion}}`;
+function mostrarInterseccion(a){
+    const filtroInter = ((el,index) => a.indexOf(el) !== index);
+    const interseccion = a.filter(filtroInter);
+    return interseccion;
 }
 
-function mostrarDiferencia(){
-    const filtroDiff = ((el) => !valorInput2.includes(el));
-    const diferencia = valorInput1.filter(filtroDiff);
-    return `{${diferencia}}`;
+function mostrarDiferencia(a,b){
+    const filtroDiff = ((el) => !b.includes(el));
+    const diferencia = a.filter(filtroDiff);
+    return diferencia;
 }
 
 function concatenacion(valor1, valor2){
@@ -34,18 +30,26 @@ function concatenacion(valor1, valor2){
 
 function potencia(otra ,nPotencia) {
     let lgPotencia = [...otra];
-    console.log(nPotencia);
+    if(nPotencia === -1){
+        return lgPotencia = [];
+    }
     for (let i = 0; i < nPotencia; i++) {
       lgPotencia = concatenacion(lgPotencia, otra);
     }
     return lgPotencia;
 }
 
-function inverso(valor){
+function inversoString(valor){
     let inverso = [...valor];
     inverso.reverse();
-    let joinArray = inverso.join("");
-    return joinArray;
+    return inverso;
+}
+
+let inversoArray = (valor) => {
+    let objetoInver = valor.map(function(x){
+        return x.split('').reverse().join('');
+    })
+    return objetoInver;
 }
 
 let cardinalidad = (valor) => valor.length;

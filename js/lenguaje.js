@@ -14,6 +14,9 @@ const enlaceConcat = document.querySelector('#concatenacion');
 const enlacePoten = document.querySelector('#potencia');
 const enlaceInver = document.querySelector('#inverso');
 const enlaceCardi = document.querySelector('#cardinalidad');
+let valorInput1 = [];
+let valorInput2 = [];
+let inputs = [];
 
 //Listeners
 cargarEventListeners();
@@ -37,12 +40,12 @@ function mostrarLenguaje(){
         aux.remove();
         mostrar1.textContent = `L1: {${valorInput1}}`;
         mostrar2.textContent = `L2: {${valorInput2}}`;
-        enlaceUnion.textContent = mostrarUnion();
-        enlaceInter.textContent = mostrarInterseccion();
-        enlaceDiff.textContent = mostrarDiferencia();
+        enlaceUnion.textContent = `{${mostrarUnion(inputs)}}`;
+        enlaceInter.textContent = `{${mostrarInterseccion(inputs)}}`;
+        enlaceDiff.textContent = `{${mostrarDiferencia(valorInput1,valorInput2)}}`;
         enlaceConcat.textContent = `{${concatenacion(valorInput1,valorInput2)}}`;
         enlacePoten.textContent = `{${potencia(valorInput1,nPotencia - 1)}}`;
-        enlaceInver.textContent = `{${inverso(valorInput1)}}`;
-        enlaceCardi.textContent = `${cardinalidad(valorInput1)}`
+        enlaceInver.textContent = `{${inversoArray(valorInput1)}}`;
+        enlaceCardi.textContent = cardinalidad(valorInput1);
     }
 }

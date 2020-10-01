@@ -15,6 +15,7 @@ function cargarEventListeners(){
 function leerPalabra(e){
     e.preventDefault();
     valorInput = inputPalabra.value;
+    inputPalabra.value = '';
     mostrarPalabra();
 }
 
@@ -22,7 +23,7 @@ function mostrarPalabra(){
     if(valorInput !== ''){
         aux.remove();
         mostrar.textContent = `P1 = ${valorInput}`
-        enlaceInver.textContent = `${inverso(valorInput)}`;
-        enlaceCardi.textContent = `${cardinalidad(valorInput)}`
+        enlaceInver.textContent = inversoString(valorInput).join("").toLowerCase();
+        enlaceCardi.textContent = cardinalidad(valorInput)
     }
 }
