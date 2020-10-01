@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3 - Palabras</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-2 mb-4">Palabras</h1>
+        <div class="row justify-content-center">
+            <div class="col-4 ">
+                <div class="card " >
+                    <form id="formulario">
+                        <div class="card-body ">
+                            <h4 class="card-title text-center">Ingreso</h5>
+                            <label for="palabra" >Ingresar Palabra :</label>
+                            <input type="text" id="palabra" class="form-control" name="palabra" placeholder="Compiladores">                        
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-success mt-3 ">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-4">
+                <div class="card" >
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Palabras guardadas</h5>
+                            <p class="text-center mt-4 aux">Ninguno</p>
+                            <p class="mostrarPalabra"></p>                     
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" >
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Ejercicios</h5>
+                            <ul>
+                                <li>Cardinalidad</li>
+                                <p id="cardinalidad"></p>
+                                <li>Inverso</li>
+                                <p id="inverso"></p>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/palabras.js"></script>
+</body>
+
+</html>

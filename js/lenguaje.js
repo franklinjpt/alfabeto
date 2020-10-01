@@ -42,7 +42,7 @@ function mostrarLenguaje(){
         enlaceDiff.textContent = mostrarDiferencia();
         enlaceConcat.textContent = `{${concatenacion(valorInput1,valorInput2)}}`;
         enlacePoten.textContent = `{${potencia(valorInput1,nPotencia - 1)}}`;
-        enlaceInver.textContent = `{${inverso()}}`;
-        enlaceCardi.textContent = `${cardinalidad()}`
+        enlaceInver.textContent = `{${inverso(valorInput1)}}`;
+        enlaceCardi.textContent = `${cardinalidad(valorInput1)}`
     }
 }

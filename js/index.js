@@ -41,13 +41,14 @@ function potencia(otra ,nPotencia) {
     return lgPotencia;
 }
 
-function inverso(){
-    let inverso = [...valorInput1];
+function inverso(valor){
+    let inverso = [...valor];
     inverso.reverse();
-    return inverso;
+    let joinArray = inverso.join("");
+    return joinArray;
 }
 
-let cardinalidad = () => valorInput1.length;
+let cardinalidad = (valor) => valor.length;
 
 
 
