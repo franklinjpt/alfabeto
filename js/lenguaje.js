@@ -12,6 +12,8 @@ const enlaceInter = document.querySelector('#interseccion');
 const enlaceDiff = document.querySelector('#diferencia');
 const enlaceConcat = document.querySelector('#concatenacion');
 const enlacePoten = document.querySelector('#potencia');
+const enlaceInver = document.querySelector('#inverso');
+const enlaceCardi = document.querySelector('#cardinalidad');
 
 //Listeners
 cargarEventListeners();
@@ -40,7 +42,7 @@ function mostrarLenguaje(){
         enlaceDiff.textContent = mostrarDiferencia();
         enlaceConcat.textContent = `{${concatenacion(valorInput1,valorInput2)}}`;
         enlacePoten.textContent = `{${potencia(valorInput1,nPotencia - 1)}}`;
-        console.log(inverso());
-        console.log(cardinalidad());
+        enlaceInver.textContent = `{${inverso()}}`;
+        enlaceCardi.textContent = `${cardinalidad()}`
     }
 }
