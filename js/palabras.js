@@ -20,10 +20,8 @@ function leerPalabra(e){
 }
 
 function mostrarPalabra(){
-    if(valorInput !== ''){
         aux.remove();
         mostrar.textContent = `P1 = ${valorInput}`
         enlaceInver.textContent = inversoString(valorInput).join("").toLowerCase();
-        enlaceCardi.textContent = cardinalidad(valorInput)
-    }
+        enlaceCardi.textContent = cardinalidad(valorInput);
 }

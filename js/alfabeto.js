@@ -23,7 +23,10 @@ function cargarEventListeners(){
 //Funciones
 function leerAlfabeto(e){
     e.preventDefault();
-    
+    if(inputAlfabeto1 === '' || inputAlfabeto2 === ''){
+        alert('Un conjunto vacio no es un alfabeto');
+        return false;
+    }
     valorInput1 = inputAlfabeto1.value.split(",");
     valorInput2 = inputAlfabeto2.value.split(",");
     inputs = valorInput1.concat(valorInput2);
@@ -34,12 +37,10 @@ function leerAlfabeto(e){
 }
 
 function mostrarAlfabeto(){
-    if(valorInput1 !== '' && valorInput2 !== ''){
         aux.remove();
         mostrar1.textContent = `A1: {${valorInput1}}`;
         mostrar2.textContent = `A2: {${valorInput2}}`;
         enlaceUnion.textContent = `{${mostrarUnion(inputs)}}`;
         enlaceInter.textContent = `{${mostrarInterseccion(inputs)}}`;
         enlaceDiff.textContent = `{${mostrarDiferencia(valorInput1,valorInput2)}}`;
-    }
 }

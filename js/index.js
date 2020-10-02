@@ -28,13 +28,13 @@ function concatenacion(valor1, valor2){
     return concatenacion;
 }
 
-function potencia(otra ,nPotencia) {
-    let lgPotencia = [...otra];
+function potencia(objIngre ,nPotencia) {
+    let lgPotencia = [...objIngre];
     if(nPotencia === -1){
         return lgPotencia = [];
     }
     for (let i = 0; i < nPotencia; i++) {
-      lgPotencia = concatenacion(lgPotencia, otra);
+      lgPotencia = concatenacion(lgPotencia, objIngre);
     }
     return lgPotencia;
 }
@@ -46,8 +46,8 @@ function inversoString(valor){
 }
 
 let inversoArray = (valor) => {
-    let objetoInver = valor.map(function(x){
-        return x.split('').reverse().join('');
+    let objetoInver = valor.map(function(el){
+        return el.split('').reverse().join('');
     })
     return objetoInver;
 }

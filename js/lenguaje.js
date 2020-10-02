@@ -36,7 +36,6 @@ function leerLenguaje(e){
 }
 
 function mostrarLenguaje(){
-    if(valorInput1 !== '' && valorInput2 !== ''){
         aux.remove();
         mostrar1.textContent = `L1: {${valorInput1}}`;
         mostrar2.textContent = `L2: {${valorInput2}}`;
@@ -47,5 +46,4 @@ function mostrarLenguaje(){
         enlacePoten.textContent = `{${potencia(valorInput1,nPotencia - 1)}}`;
         enlaceInver.textContent = `{${inversoArray(valorInput1)}}`;
         enlaceCardi.textContent = cardinalidad(valorInput1);
-    }
 }
