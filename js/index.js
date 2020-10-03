@@ -1,4 +1,5 @@
 function mostrarUnion(a){
+    (a[0]==='' ? a.shift() : false);
     const filtroUnion = ((el,index) => a.indexOf(el) === index);
     const union = a.filter(filtroUnion);
     return union;
@@ -18,6 +19,9 @@ function mostrarDiferencia(a,b){
 
 function concatenacion(valor1, valor2){
     let concatenacion = [];
+    if(valor2[0] === '' || valor1[0] === ''){
+        return concatenacion;
+    }else{
     for(let i=0; i<valor1.length; i++){
         let a = valor1[i];
         for(let j=0; j<valor2.length; j++){
@@ -26,6 +30,7 @@ function concatenacion(valor1, valor2){
         }
     }
     return concatenacion;
+    }
 }
 
 function potencia(objIngre ,nPotencia) {
@@ -52,7 +57,7 @@ let inversoArray = (valor) => {
     return objetoInver;
 }
 
-let cardinalidad = (valor) => valor.length;
+let cardinalidad = (valor) => (valor[0]==='' ? 0 : valor.length);
 
 
 

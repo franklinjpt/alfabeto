@@ -30,9 +30,13 @@ function leerLenguaje(e){
     
     valorInput1= inputLenguaje1.value.split(",");
     valorInput2 = inputLenguaje2.value.split(",");
+    valorInput1 = valorInput1.map(el => el.trim());
+    valorInput2 = valorInput2.map(el => el.trim());
     inputs = valorInput1.concat(valorInput2);
     nPotencia = parseInt(document.querySelector('#nPotencia').value);
     mostrarLenguaje();
+    inputLenguaje1.value = '';
+    inputLenguaje2.value = '';
 }
 
 function mostrarLenguaje(){

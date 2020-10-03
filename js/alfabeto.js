@@ -23,16 +23,17 @@ function cargarEventListeners(){
 //Funciones
 function leerAlfabeto(e){
     e.preventDefault();
-    if(inputAlfabeto1 === '' || inputAlfabeto2 === ''){
+    if(inputAlfabeto1.value === '' || inputAlfabeto2.value === ''){
         alert('Un conjunto vacio no es un alfabeto');
         return false;
     }
     valorInput1 = inputAlfabeto1.value.split(",");
     valorInput2 = inputAlfabeto2.value.split(",");
+    valorInput1 = valorInput1.map(el => el.trim());
+    valorInput2 = valorInput2.map(el => el.trim());
     inputs = valorInput1.concat(valorInput2);
     inputAlfabeto1.value = '';
     inputAlfabeto2.value = ''; 
-
     mostrarAlfabeto();
 }
 
