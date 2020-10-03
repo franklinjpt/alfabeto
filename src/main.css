@@ -1,0 +1,20 @@
+#barra{
+    background-color: #abb2b9 !important;
+    font-size: 20px !important;
+}   
+
+body{
+    background-color: #bbc0c5 !important;
+}
+
+.card-title{
+    /* background-color: #abb2b9; */
+}
+
+.card-body{
+    background-color: #d9e2eb;
+}
+
+.nav-link{
+    color: #000000;
+}
